@@ -40,7 +40,7 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || App::new().app_data(db.clone())
         .service(locations))
-        .bind(("127.0.0.1", 50000))?
+        .bind(("127.0.0.1", 8080))?
         .run()
         .await
 }
